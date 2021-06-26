@@ -1,0 +1,42 @@
+👀 lambda or anonymous function:
+👉🏻 Nameless function
+👉🏻 syntax ➡ lambda arguments:expression
+👉🏻 lambda function is only one line only
+👉🏻 s = lambda n:n*n
+
+
+👀 filter 
+👉🏻 to filter values from sequence based on some condtion
+👉🏻 syntax ➡ filter(function, sequence)
+👉🏻  l = [0,5,15,20,25]
+    def is_even(n):
+        return True if n%2 == 0 else False
+    output = filter(is_even, l)
+    print(list(filter(output)))
+👉🏻 with lambda function
+    l = [0,4,19,7,20,32,40,59]
+    even = list(filter(lambda n:n%2==0, l))
+    odd =list(filter(lambda n:n%2!=0, l))
+
+
+
+👀 map function 
+👉🏻 for every input value we have to generate an output value
+👉🏻 map() --> if input 10 values than generate 10 output values
+👉🏻 l1 = [1,2,3,4]
+    🐇 l2 = [10,20,30,40]
+    🐇 map(lambda x,y:x*y, l1, l2)
+
+👀 reduce()
+👉🏻  outputs only 1 value
+👉🏻  syntax ➡ reduce(function, sequence)
+👉🏻  we have to import from functools
+👉🏻 from functools import * 
+    l = [10,20,30,40]
+    result = reduce(lambda x,y:x*y,l)
+    print(result)
+
+👉🏻  def multiply(a,b):
+        return a*b
+    reduce(multiply, range(1,10))
+
