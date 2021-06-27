@@ -1,0 +1,65 @@
+👀 dir() 
+👉🏻 python virtual machine will add some predefime members in module
+👉🏻 without argument ➡ finding the member of current module
+⮑ members (variables, classess, functions)
+👀 dir(with_arrgument)
+👉🏻 listout member of given module
+⮑ how to use dir
+⮑ import math
+⮑ print(dir(math))
+
+👀 help()
+👉🏻 help print out complete documentation of module
+⮑ how to use help
+⮑ import math
+⮑ help(math)
+
+🚀 for every module PVM will add some member these members are going to used by internal purposes
+⮑ some used by users also
+
+🚀 __doc__
+⮑ holds documentation string of module
+⮑ ''' this is the documentation string '''
+⮑ print(__doc__)
+⮑
+⮑ import random from math
+print(random.__doc__)
+
+🚀 __file__
+⮑ print('File Name is:', __file__)
+⮑ print out current filename
+⮑ print('Absolute path  is:', os.path.abspath(__file__))
+⮑ print out absolute path of File
+⮑ dir name print('Dir Name:', os.path.dirname( os.path.abspath(__file__))) 
+
+🚀 __name__
+⮑ provides functionality of main function 
+⮑ if module is directly executed __name__ value will become __main__ indicate that this is main program
+⮑ if execution is done by importing __name__ value will become name of the module
+
+👀 🚀 🐯 Random module 🐯 🚀 🚀🚀
+😼 Random function
+⮑ random() give random float value between 0 and 1 (not enclusive)
+
+😼 uniform()
+⮑ random float value inbetween given two number (not inclusive)
+⮑ uniform(1,100)
+
+😼 randint()
+⮑ random int value between two given number (inclusive)
+⮑ randint(1,10) ➡➡➡➡➡➡➡ 1 to 10 (1 and 10 included)
+
+😼 randrange(begin,end,step) #️⃣ begin to end - 1
+⮑ begin is optional default value is 0
+⮑ step is optional default value is 1
+⮑ a random number will be picked fron range
+
+😼 😼 choice()
+🐇 🐇 🐇 generate a random object from given sequences
+🐇 🐇 🐇 li = ['sunny', 'bunny','minny', 'chinny','prickely']
+🐇 🐇 🐇 choice(li)
+🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇
+🐇 🐇 🐇 alphabets = 'abcdefghijklmnopqrstuvwxyz'
+🐇 🐇 🐇 choice(alphabets)
+🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇
+
