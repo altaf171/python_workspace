@@ -1,0 +1,8 @@
+🗂 🗂 🗂
+🗂 f= open('abc.txt','w') ＃if file does not  exist it will create new one otherwise write to file
+🗂 f.write('Altaf Husen\n')
+🗂 f.write('Email: dfsdvknkd\n')
+🗂 f.write('pass: fnsdnvjn'\n)
+🗂 f.close()
+🗂 🗂 🗂 🗂 🗂 
+🗂  f = 

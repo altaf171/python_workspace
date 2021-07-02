@@ -1,0 +1,12 @@
+📦 📦 Package
+🐰  A collection of related modules in folder is consider as package
+🐰  package is a directory
+🐰  folder must include __init__.py to be considered as a package
+🐰  __init__.py is empty File
+🐰  it improves reusability and manageblity
+
+🚀🚀 from python3.3 __init__.py is optional 🚀🚀
+
+
+🚀🚀 📦 📦 📦 📦 📦 📦 📦 📦 📦 📦 🚀🚀
+Library ➡️ packages ➡️ modules ➡️ functions

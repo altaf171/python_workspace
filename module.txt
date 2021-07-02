@@ -38,6 +38,7 @@ print(random.__doc__)
 ⮑ if execution is done by importing __name__ value will become name of the module
 
 👀 🚀 🐯 Random module 🐯 🚀 🚀🚀
+
 😼 Random function
 ⮑ random() give random float value between 0 and 1 (not enclusive)
 
@@ -62,4 +63,13 @@ print(random.__doc__)
 🐇 🐇 🐇 alphabets = 'abcdefghijklmnopqrstuvwxyz'
 🐇 🐇 🐇 choice(alphabets)
 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇 🐇
+
+
+👀 🚀 🐯 Math module 🐯 🚀 🚀🚀
+① sqrt(x)
+② ceil(x)
+⓷ floor(x)
+⓸ fabs(x)
+⓹ log(x)
+⑥ sin(x)
 
