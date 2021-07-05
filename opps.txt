@@ -1,0 +1,332 @@
+
+👻👻 access instance static_variable
+🐤🐤 within class by using self
+🐤🐤 outside of the class with obj reference
+
+
+😒😒 Type of methods in class 
+(⓿_⓿) Instance Method 
+(⓿_⓿) Static Method
+(⓿_⓿) class Method
+
+
+🐤🐣 Instance Method 
+🦾 first arg to self // any name we can use insteed of self
+🦾 not need for decorator
+🦾 access instance method
+🦾 inside class with self
+🦾 outside of class with object reference
+
+
+🐤🐣 Class Method 
+🦾 for every class pvm will create object to hold class level data
+🦾 cls is pointer to that class
+🦾 syntax:
+🦾 @classmethod
+🦾 def methodName(cls):
+🦾              print(cls.static_variable)
+🪶 access to class method
+🪶 classname.classmethod
+
+
+🐤🐣 Static Method 
+🦾 syntax:
+🦾 first arg to class method cls // any name we can use insteed of cls
+🦾 @staticmethod
+🦾 def methodName(a,b,c):
+🦾         return a+b+c
+🪶 access to static method
+🪶 classname.classmethod
+🪶or you can use instance object reference
+
+
+😊😊😊😊😊😊😊 Self 😊😊😊😊😊😊😊😊😊😊
+
+🪶 self is not a keyboard in python 
+🪶 In class constructor and instance method first argument should be self
+🪶 we can use any name insteed of self
+🪶 pvm will provide value for self
+🪶 we can use self only in class constructor and instance methods
+🪶 in other languages self is not compelsery
+
+
+😊😊😊😊😊😊😊😊😊 Static variable 😊😊😊😊😊😊😊😊😊😊
+ id value of the variable is not varied from object to object 
+ we should use static variable
+ declaration within class directly we can declare
+ by using class name we access
+
+ various palces to declare static variable
+    we can declare any where in class
+    In general we declare static variable directly inside class outside of any methods
+    inside constructor or instance method we can declare static variable by using class name classname.variablename = value
+    inside class method by usinf class name or cls variable
+    inside static method by using class name
+    from outside of class, by using class name
+
+
+🤬🤬🤬🤬🤬 Getter and setters 🤬🤬🤬🤬🤬🤬🤬🤬
+🪶🪶 Getters and are setters are more sequre than constructor
+def setName(self,name):
+   self.name= name
+
+def getName(self):
+   return self.name
+
+😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴😴
+🎈🎈🎈✨ if we are using any instance better to go for instance method
+
+
+🐣🐣🐣🐣🐣🐣 static method without decorator 🐣🐣🐣🐣🐣🐣
+👻👻👻👻 if we are using method without decorator it can act as instance or static method depending on acces method
+👻👻👻👻👻👻 classname.methodname it will act as static method 
+👻👻👻👻👻👻 objRef.methodname it will act as instance method
+
+
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽ passing one class members ton another class ⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+⚽⚽
+
+
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽ Inner classes class inside  another class ⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+🏀🏐🥎👻⚾ class can have :
+⚾⚾⚾      instance/static/local variables
+⚾⚾⚾      instance/static/local variables
+⚾⚾⚾      obj of one class in other class obj or in class
+⚾⚾⚾      class inside class
+      ✨✨✨✨ withot existing one type of obj, there is no chance existing another type of object ,such type of cases inner classes
+      ✨ without existing one university object there is no chance of existing department object
+      ✨ university is outer class
+      ✨ department is inner class
+
+      ✨ class Head:
+            ..
+            ..
+            class Brain:
+               pass
+            class Mouth:
+               ...
+            
+            class Eye:
+               ....
+
+            Class Ear:
+               ...
+
+      ✨ inner class obj is always associate with outer class object
+      🥎🏐🥎🥎🏐 Nested Inner class is possible  🏐 🥎 
+
+      ✨ advantages:
+            1. Modularity of application will be improved 
+            2. Security
+            3. 
+
+
+
+
+
+         ✨ class Outer:
+               def __init__(self):
+                  print("Outer class object craetion")
+               
+               class Inner:
+                  def __init__(self):
+                     print('Inner class object creation')
+                  def m1(self):
+                     print('inner class object')
+
+                  class InnerInner:
+                     def __init__(self):
+                     print('InnerInner class object creation')
+
+               class Inner2:
+                   def __init__(self):
+                     print('Inner2 class object creation')
+                  def m1(self):
+                     print('inner2 class object')
+
+         O = outer()    ----------\
+                                    or  i = Outer().Inner() 
+         i = o.inner()  ----------/
+         i.m1()
+         
+          or 
+         
+         Outer().Inner().m1()
+
+
+
+         i2 = o.inner2()
+
+         ✨ by using o we can call any outer class method
+         ✨ by using we can call any inner class Method
+
+      ✨✨✨✨ class Human:
+                     def __init__(self, name):
+                        print('Human obj creation')
+                        self.name = name
+                        self.head = self.Head() # head object automatically created
+
+                     def info(self):
+                        print('Hello, My self', self.name)
+                        print('im fully busy with')
+                        self.head.talk()
+                        self.head.brain.think()
+
+                     class Head:
+                        def __init__(self):
+                           print('Head object creation')
+                           self.brain = self.Brain()
+
+                        def talk(self):
+                           print('human can talk')
+
+                        class Brain:
+                           def __init__(self):
+                              print('Brain object creation')
+                           
+                           def think(self):
+                              print('human is thinking')
+
+            
+            human = Human('Durga Sir')
+            human.info()
+
+          ✨✨✨ ✨ class Person:
+                           def __init__(self,name, dd, mm, yyyy):
+                              print('Person object creation ') 
+                           
+                           self.nane = name
+                           self.dob = self.Dob(dd,mm,yyyy)
+
+                           def info(self):
+                              print('name:' self.name)
+                              self.dob.display()
+
+                           class Dob:
+                              def __init__(self, dd,mm,yyyy):
+                                 print('Dob obj craetion')
+
+                                 self.dd = dd
+                                 self.mm = mm
+                                 self.yyyy = yyyy
+
+                              def display(self):
+                                 print(f'Dob = {self.dd}/{self.mm}/{self.yyyy}')
+                     
+                     person = Person('Durga',21,3,1947)
+                     person.inf()
+                     person.dob.display()
+
+⚾🏐🥎🏀⚽ Nested method 🏐⚾🥎🏀⚽
+🥎⚾🏐 Inside many languages method inside method is not possible but in python it is allowed
+
+⚽⚽ if some is required repeatedly inside method then we can use this feature of python
+
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽                          ⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎 🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽    Garbage Collector     ⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎 🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽                          ⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎 🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀
+⚽⚾🥎🏀👻🏐🥎🏐 if an object not hving the reference variable  than the object will be eligible for Garbage Collector
+⚽⚾🥎🏀👻🏐🥎🏐 how ton enable and or disable garbage collector (by default it is enabled)
+⚽⚾🥎🏀👻🏐🥎🏐 gc Module
+⚽⚾🥎🏀👻🏐🥎🏐 gc.isenabled() ---> return True if enabled
+⚽⚾🥎🏀👻🏐🥎🏐 gc.disable() --->  to disable garbage collector
+⚽⚾🥎🏀👻🏐🥎🏐 distructor --->    __del__(self)
+⚽⚾🥎🏀👻🏐🥎🏐 just before destroying of the object, gc will execute this method , to automatically perform clean up/ resource deallocation
+⚽⚾🥎🏀👻🏐🥎🏐 obj = None   ---> will set reference to None object 
+⚽⚾🥎🏀👻🏐🥎🏐 del obj    ---> remove this reference to the object 
+⚽⚾🥎🏀👻🏐🥎🏐 If object has atleast on object reference than it will not b eligible for gc
+⚽⚾🥎🏀👻🏐🥎🏐 sys.getrefcount(obj) ----> count reference of the object
+
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀⚽⚽⚽⚾⚾🥎🥎🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽⚽⚽🥎🏀🏀🏀🏀
+⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽⚽⚽⚾🥎🥎 oop part 2 ⚽⚽⚽⚾⚾🥎🥎🏀🏀🏐🏐🏀🏀🥎🥎⚾⚾⚽⚽⚽⚽⚽⚽⚽⚾🥎🥎🏀🏀👻👻👻🏐🏐🥎🏐🏀🏀⚽⚽⚾👻👻👻🏐🏐🥎🏐🏀🏀
+✨✨✨ use members of one class in another class 
+✨✨✨ 2 ways
+      ✨✨✨ 1. Composition  (Has-A-Relation)
+                  class Car has a Engine reference
+      ✨✨✨ 2. Inheritance Is-A relationship
+
+
+👻👻 class Engine:
+         def  __init__(self):
+            self.power = '12hp'
+
+         def useEngine(self):
+            print('Engine speific functionality')
+
+      class Car:
+         def __init__(self):
+            self.engine = Engine()
+
+         def usecar(self):
+            print('car speific functionality')
+            self.engine.useEngine()
+            print(self.engine.power)
+
+
+
+👻👻👻 class Car: 
+            def __init__(self, name, model, color):
+               self.name= name
+               self.model = model
+               self.color = color
+            
+            def getInfo(self):
+               print(f'name: {self.name}, Model : {self.model}, color : {self.color} ')
+
+         class Employee:
+            def __init__(self,name, eno, car):
+               self.name = name
+               self .eno = eno 
+               self.car = car
+
+            def getInfo(self):
+               print(f'name:{self.name}')
+               print(f'E No :{self.eno}')
+               self.car.getInfo()
+
+🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣 IS-A relationship 🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣🐣
+🐣 class P:
+      def m1(self):
+         print('m1 method')
+
+   class C(P):
+      def m2(self):
+         print('m2 Method')
+
+   
+   cobj= C()
+   cobj.m1()
+   cobj.m2()
+
+
+🐣 class P:
+      # 10 methods
+   
+   class C(P):
+      # 5 method
+
+
+   p = P() # p will have 10 methods
+   c= C() # c will have 15 method to access   
+
+
+🐣 class P:
+     def __init__(self):
+         print('constructor')
+      def m1(self):
+         print('Instance method')
+
+      @staticmethod
+      def m2():
+         print('static method')
+
+      @classmethod
+      def m3(cls):
+
+
+🐣🐣🐣❤️❤️❤️ super().__init__(name,age) --> (inside child class constructer) to execute parent class constructer
+
+
+
