@@ -330,3 +330,77 @@ def getName(self):
 
 
 
+operater overloading ---> possible for any operater
+Method overloading  -->  is not possible
+
+🚧🏗🚧👷‍♀️👷‍♂️🚧 constructer overloading 
+   constructer overloading --> is not possible
+
+   always going to consider latest defined constructer
+
+   ✨we can do same thing with 
+
+      constructor with default arg
+         def __init__(self, x=None, y=None):
+            print('No-arg  | One-arg | Two-args') 
+
+
+      variable length args 
+         def __init__(self, *args):
+            print('the length of argument is :', len(args))
+
+🚂🚉🚉🚂🚂 Overriding
+
+   whatever members available in parent class ara by default available in child class
+
+   class P:
+      def property(self):
+         print('Land , Cash, Gold, Power')
+      def marriage(self):
+         print('beautyful lady, handsome boy')
+
+   class C(P): 
+      def marriage(self):
+         print('beautyful lady, handsome boy -- with my own choice')
+
+   c = C()
+   c.property()
+   c.marriage()
+
+
+🌟⭐✨ redefing parent  class method is class method Overriding
+
+🚧🚧 constructer overloading
+      class P:
+         def __init__(self):
+            print('parent constructer')
+
+   class C(P): 
+     def __init__(self):
+            print('child constructer')
+
+
+
+
+🚧  class Person:
+         def __init__(self,name,age):
+            self.name = name
+            self.age = age
+
+         def display(self):
+            print('name:',self.name)
+            print('age:',self.age)
+
+   class Child:
+            def __init__(self,name,age, eno, esal):
+            super.__init__(name,age)
+               self.eno = eno
+               self.esal = esal
+
+            def display(self):
+               super.display()
+               print('emp no:',self.eno)
+               print('salary:',self.esal)
+
+               
+
